@@ -80,8 +80,11 @@ git submodule update diem
 
 
 // reset diem submodule to diem release revision
-cd diem
-git fetch/checkout/pull origin <revision/branch>
+// cd diem
+// git fetch/checkout/pull origin <revision/branch>
+
+// link fold diem to Violas 
+ln -s ../Violas diem
 
 // re-generate stdlib and lcs type classes
 gradle gen

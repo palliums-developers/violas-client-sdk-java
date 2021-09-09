@@ -109,12 +109,12 @@ task gen {
         exec {
             workingDir 'diem'
             executable "sh"
-            args "-c", "cargo build -p transaction-builder-generator"
+            args "-c", "cargo build --release -p transaction-builder-generator"
         }
         exec {
             workingDir 'diem'
             executable "sh"
-            args '-c', 'target/debug/generate-transaction-builders' +
+            args '-c', 'target/release/generate-transaction-builders' +
                     ' --language java' +
                     ' --module-name com.diem.stdlib' +
                     ' --with-diem-types "testsuite/generate-format/tests/staged/diem.yaml"' +
